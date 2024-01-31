@@ -11,7 +11,7 @@ int winFlag = 0;
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
 // Game loop
-while (Supporting.Winner(winFlag) == 0)
+while (Supporting.Winner(winFlag, currentPlayer, board) == 0)
 {
     // Print the current board
     Console.WriteLine();
@@ -37,7 +37,6 @@ while (Supporting.Winner(winFlag) == 0)
     {
         Console.WriteLine("Invalid move. Try again.");
     }
-    Supporting.Winner(winFlag, currentPlayer, board);
 }
 
 // Game over, print the final board
