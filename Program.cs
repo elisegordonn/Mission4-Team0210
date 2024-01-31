@@ -36,15 +36,6 @@ class Driver
 
         // Game over, print the final board
         Supporting.Board();
-
-        // Check for a winner and display the result
-        if (Supporting.Winner() == 1)
-        {
-            Console.WriteLine($"Player {currentPlayer} wins!");
-        }
-        else
-        {
-            Console.WriteLine("It's a draw!");
-        }
+        Supporting.Winner();
     }
 }
