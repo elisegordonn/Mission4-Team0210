@@ -29,8 +29,9 @@ namespace Mission4_Team0210
         }
 
         //method to determine the winner of the game
-        public void Winner(int winFlag, int currentPlayer, char[] board)
+        public int Winner(int winFlag, int currentPlayer, char[] board)
         {
+          
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
             {
@@ -89,6 +90,8 @@ namespace Mission4_Team0210
                 Console.WriteLine("Draw. There is no winner.");
                 Console.WriteLine("Thanks for playing! :D");
             }
+
+            return winFlag;
         }
     }
 }
