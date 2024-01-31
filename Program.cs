@@ -20,7 +20,7 @@ while (winFlag == 0)
     Console.WriteLine($"Player {currentPlayer}'s turn.");
     Console.Write("Enter space (1-9): ");
     int numboard = int.Parse(Console.ReadLine());
-    if (numboard >= 1 && numboard <= 9 && board[numboard] == '-')
+    if (numboard >= 1 && numboard <= 9 && board[numboard] != 'X' && board[numboard] != 'O')
     {
         if (currentPlayer == 1)
         {
