@@ -11,11 +11,8 @@ namespace Mission4_Team0210
     internal class Supporting
     {
         //make a baord method to display the tic tac toe board
-        public void Board()
+        public void Board(char[] board)
         {
-            //call the board array from the Driver class 
-            Driver.board();
-
             //tic tac toe board
             Console.WriteLine("   |   |   |   ");
             Console.WriteLine(" {0}  |  {1}  |  {2}  ", board[1], board[2], board[3]);
@@ -26,10 +23,8 @@ namespace Mission4_Team0210
         }
 
         //method to determine the winner of the game
-        public int Winner()
+        public int Winner(int winFlag, int currentPlayer, char[] board)
         {
-            int winFlag = 0;
-
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
             {
