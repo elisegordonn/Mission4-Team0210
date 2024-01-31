@@ -14,7 +14,7 @@ namespace Mission4_Team0210
         public void Board()
         {
             //call the board array from the Driver class 
-            Driver.board();
+            Driver.board;
 
             //tic tac toe board
             Console.WriteLine("   |   |   |   ");
@@ -26,10 +26,8 @@ namespace Mission4_Team0210
         }
 
         //method to determine the winner of the game
-        public int Winner()
+        public void Winner()
         {
-            int winFlag = 0;
-
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
             {
@@ -70,11 +68,15 @@ namespace Mission4_Team0210
             {
                 winFlag = -1;
             }
+            else
+            {
+                winFlag = 0;
+            }
 
             //put in winners
             if (winFlag == 1)
             {
-                Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
+                Console.WriteLine("Player {0} has won", (Driver.currentPlayer % 2) + 1);
             }
             else
             {
