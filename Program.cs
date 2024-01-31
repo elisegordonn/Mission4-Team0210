@@ -38,7 +38,7 @@ class Driver
         Supporting.Board();
 
         // Check for a winner and display the result
-        if (Supporting.Winner() = 1)
+        if (Supporting.Winner() == 1)
         {
             Console.WriteLine($"Player {currentPlayer} wins!");
         }
