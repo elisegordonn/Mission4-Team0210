@@ -11,7 +11,7 @@ namespace Mission4_Team0210
     internal class Supporting
     {
         //make a baord method to display the tic tac toe board
-        public void Board()
+        public void Board(char[] board)
         {
             //call the board array from the Driver class 
             //Driver.board;
@@ -26,7 +26,7 @@ namespace Mission4_Team0210
         }
 
         //method to determine the winner of the game
-        public void Winner()
+        public int Winner(int winFlag, int currentPlayer, char[] board)
         {
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
