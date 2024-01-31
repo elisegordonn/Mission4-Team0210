@@ -14,7 +14,7 @@ Console.WriteLine("Welcome to Tic-Tac-Toe!");
 while (winFlag == 0)
 {
     // Print the current board
-    Supporting.Board();
+    Supporting.Board(board);
 
     // Get the current player's move
     Console.WriteLine($"Player {currentPlayer}'s turn.");

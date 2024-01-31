@@ -26,7 +26,7 @@ namespace Mission4_Team0210
         }
 
         //method to determine the winner of the game
-        public int Winner(int winFlag, int currentPlayer, char[] board)
+        public void Winner(int winFlag, int currentPlayer, char[] board)
         {
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
@@ -76,7 +76,7 @@ namespace Mission4_Team0210
             //put in winners
             if (winFlag == 1)
             {
-                Console.WriteLine("Player {0} has won", (Driver.currentPlayer % 2) + 1);
+                Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
             }
             else
             {
