@@ -82,11 +82,13 @@ namespace Mission4_Team0210
             //put in winners
             if (winFlag == 1)
             {
+                Console.WriteLine();
                 Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
                 Console.WriteLine("Thanks for playing! :D");
             }
             else if (winFlag == -1)
             {
+                Console.WriteLine();
                 Console.WriteLine("Draw. There is no winner.");
                 Console.WriteLine("Thanks for playing! :D");
             }
