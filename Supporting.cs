@@ -66,6 +66,8 @@ namespace Mission4_Team0210
             {
                 winFlag = 1;
             }
+
+            //if there is a draw
             else if (board[1] != '1' && board[2] != '2' && board[3] != '3' && board[4] != '4'
                 && board[5] != '5' && board[6] != '6' && board[7] != '7' && board[8] != '8' && board[9] != '9')
             {
@@ -81,7 +83,7 @@ namespace Mission4_Team0210
             {
                 Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
             }
-            else
+            else if (winFlag == -1)
             {
                 Console.WriteLine("Draw");
             }
