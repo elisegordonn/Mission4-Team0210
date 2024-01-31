@@ -36,9 +36,8 @@ while (winFlag == 0)
     {
         Console.WriteLine("Invalid move. Try again.");
     }
-            
+    Supporting.Winner(winFlag, currentPlayer, board);
 }
 
 // Game over, print the final board
 Supporting.Board(board);
-Supporting.Winner(winFlag, currentPlayer, board);
