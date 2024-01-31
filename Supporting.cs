@@ -17,20 +17,21 @@ namespace Mission4_Team0210
             //Driver.board;
 
             //tic tac toe board
-            Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[1], board[2], board[3]);
-            Console.WriteLine("_____|_____|_____ ");
-            Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[4], board[5], board[6]);
-            Console.WriteLine("_____|_____|_____ ");
-            Console.WriteLine("     |     |      ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[7], board[8], board[9]);
-            Console.WriteLine("     |     |      ");
+            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  {0}  |  {1}  |  {2} ", board[1], board[2], board[3]);
+            Console.WriteLine("_____|_____|_____");
+            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  {0}  |  {1}  |  {2} ", board[4], board[5], board[6]);
+            Console.WriteLine("_____|_____|_____");
+            Console.WriteLine("     |     |     ");
+            Console.WriteLine("  {0}  |  {1}  |  {2} ", board[7], board[8], board[9]);
+            Console.WriteLine("     |     |     ");
         }
 
         //method to determine the winner of the game
-        public void Winner(int winFlag, int currentPlayer, char[] board)
+        public int Winner(int winFlag, int currentPlayer, char[] board)
         {
+          
             //horizontal wins
             if (board[1] == board[2] && board[2] == board[3])
             {
@@ -66,6 +67,8 @@ namespace Mission4_Team0210
             {
                 winFlag = 1;
             }
+
+            //if there is a draw
             else if (board[1] != '1' && board[2] != '2' && board[3] != '3' && board[4] != '4'
                 && board[5] != '5' && board[6] != '6' && board[7] != '7' && board[8] != '8' && board[9] != '9')
             {
@@ -80,15 +83,15 @@ namespace Mission4_Team0210
             if (winFlag == 1)
             {
                 Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
+                Console.WriteLine("Thanks for playing! :D");
             }
-            else
+            else if (winFlag == -1)
             {
-                Console.WriteLine("Draw");
+                Console.WriteLine("Draw. There is no winner.");
+                Console.WriteLine("Thanks for playing! :D");
             }
+
+            return winFlag;
         }
     }
-
-    
-
-    
 }
