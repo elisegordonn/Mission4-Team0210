@@ -14,7 +14,7 @@ namespace Mission4_Team0210
         public void Board()
         {
             //call the board array from the Driver class 
-            Driver.board;
+            //Driver.board;
 
             //tic tac toe board
             Console.WriteLine("   |   |   |   ");
