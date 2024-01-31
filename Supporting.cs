@@ -71,6 +71,7 @@ namespace Mission4_Team0210
                 winFlag = -1;
             }
 
+            //put in winners
             if (winFlag == 1)
             {
                 Console.WriteLine("Player {0} has won", (currentPlayer % 2) + 1);
