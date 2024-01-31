@@ -11,7 +11,7 @@ int winFlag = 0;
 Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
 // Game loop
-while (Supporting.Winner(winFlag) == 0)
+while (Supporting.Winner(winFlag, currentPlayer, board) == 0)
 {
     // Print the current board
     Console.WriteLine();
