@@ -1,8 +1,6 @@
 ﻿//Mission 4, Section 2, Team 10
 // Daxton Jergensen, Elise Gordon, Lily Tait, Rai Martin
 using Mission4_Team0210;
-using System.Net;
-
 // Create an instance of the supporting class
 Supporting Supporting = new Supporting();
 
