@@ -23,6 +23,7 @@ while (Supporting.Winner(winFlag, currentPlayer, board) == 0)
     // Get the current player's move
     Console.WriteLine($"Player {currentPlayer}'s turn.");
     Console.Write("Enter space (1-9): ");
+    // make sure to only allow numbers 1-9, nothing more or less or any other characters
     if (int.TryParse(Console.ReadLine(), out int numboard) && numboard >= 1 && numboard <= 9 && board[numboard] != 'X' && board[numboard] != 'O')
     {
         if (currentPlayer == 1)
