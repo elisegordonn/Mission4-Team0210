@@ -10,12 +10,9 @@ namespace Mission4_Team0210
     //make a Supporting class for the tic tac toe board
     internal class Supporting
     {
-        //make a baord method to display the tic tac toe board
+        //make a baord method to display the tic tac toe board array from the main program
         public void Board(char[] board)
         {
-            //call the board array from the Driver class 
-            //Driver.board;
-
             //tic tac toe board
             Console.WriteLine("     |     |     ");
             Console.WriteLine("  {0}  |  {1}  |  {2} ", board[1], board[2], board[3]);
@@ -30,9 +27,8 @@ namespace Mission4_Team0210
 
         //method to determine the winner of the game
         public int Winner(int winFlag, int currentPlayer, char[] board)
-        {
-          
-            //horizontal wins
+        { 
+         //horizontal wins:
             if (board[1] == board[2] && board[2] == board[3])
             {
                 winFlag = 1;
@@ -58,6 +54,7 @@ namespace Mission4_Team0210
             {
                 winFlag = 1;
             }
+
             //diagonal wins
             else if (board[1] == board[5] && board[5] == board[9])
             {
@@ -68,18 +65,20 @@ namespace Mission4_Team0210
                 winFlag = 1;
             }
 
-            //if there is a draw
+            //if there is a draw (board is full but no winners)
             else if (board[1] != '1' && board[2] != '2' && board[3] != '3' && board[4] != '4'
                 && board[5] != '5' && board[6] != '6' && board[7] != '7' && board[8] != '8' && board[9] != '9')
             {
                 winFlag = -1;
-            }
+            }   
+           
+            // if no winners, continue the game
             else
             {
                 winFlag = 0;
             }
 
-            //put in winners
+            //tell the winner that they've won, or announce draw
             if (winFlag == 1)
             {
                 Console.WriteLine();
