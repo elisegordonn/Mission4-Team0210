@@ -23,8 +23,7 @@ while (Supporting.Winner(winFlag, currentPlayer, board) == 0)
     // Get the current player's move
     Console.WriteLine($"Player {currentPlayer}'s turn.");
     Console.Write("Enter space (1-9): ");
-    int numboard = int.Parse(Console.ReadLine());
-    if (int.TryParse(Console.ReadLine(), out numboard) && numboard >= 1 && numboard <= 9 && board[numboard] != 'X' && board[numboard] != 'O')
+    if (int.TryParse(Console.ReadLine(), out int numboard) && numboard >= 1 && numboard <= 9 && board[numboard] != 'X' && board[numboard] != 'O')
     {
         if (currentPlayer == 1)
         {
@@ -35,7 +34,7 @@ while (Supporting.Winner(winFlag, currentPlayer, board) == 0)
             board[numboard] = 'O';
         }
 
-        //switch player number between 1 and 2
+        // Switch player number between 1 and 2
         currentPlayer = (currentPlayer == 1) ? 2 : 1;
     }
     else
